@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/*!
+Theme Name: Zenman Carr Theme
+Description: WordPress Theme built for CarrHR by Zenman.
+*/
 /*
 NOTE: this SASS file was structured to work with Codekit, which does not support
 directory imports (e.g., @import "stars/zemplate/*")
@@ -6,22 +10,28 @@ directory imports (e.g., @import "stars/zemplate/*")
 The import rules herein can be replaced by copying and pasting from your
 original master SASS file, which is backed up at sass/style.scss.bak
  */
-/*------------------------------------*    ::Variables
+/*------------------------------------*\
+    ::Variables
     ----------------------------------*
     ::Colors
     ::Breakpoints
     ::Layout
     ::Text Styling
 \*------------------------------------*/
-/*------------------------------------*    ::Colors
+/*------------------------------------*\
+    ::Colors
 \*------------------------------------*/
-/*------------------------------------*    ::Breakpoints
+/*------------------------------------*\
+    ::Breakpoints
 \*------------------------------------*/
-/*------------------------------------*    ::Layout
+/*------------------------------------*\
+    ::Layout
 \*------------------------------------*/
-/*------------------------------------*    ::Text Styling
+/*------------------------------------*\
+    ::Text Styling
 \*------------------------------------*/
-/*------------------------------------*    ::Extends
+/*------------------------------------*\
+    ::Extends
     ----------------------------------*
     ::
 \*------------------------------------*/
@@ -45,11 +55,11 @@ input[type="submit"], .form .wpcf7 input[type="submit"] {
   font-family: Arial, Helvetica, sans-serif;
   transition: background-position 400ms, padding 400ms, background-color 400ms;
   outline: 0; }
-  .button--light:hover, .form[style*="background"] input[type="submit"]:hover, .button:hover,
+  .button--light:hover, .form[style*="background"] input:hover[type="submit"], .button:hover,
   button:hover,
-  html input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover, .form .wpcf7 input[type="submit"]:hover {
+  html input:hover[type="button"],
+  input:hover[type="reset"],
+  input:hover[type="submit"], .form .wpcf7 input:hover[type="submit"] {
     background-color: #003773;
     background-position: 125% center;
     padding: 12px 25px;
@@ -59,11 +69,12 @@ input[type="submit"], .form .wpcf7 input[type="submit"] {
   border-color: #FFFFFF;
   background-color: transparent;
   color: #FFFFFF; }
-  .bgcolor-blue .button:hover, .button--light:hover, .half-half .button:hover, .form[style*="background"] input[type="submit"]:hover, .form.column-count-two .wpcf7 input[type="submit"]:hover, .link-farm--light .button:hover, .one-column-content--light .button:hover {
+  .bgcolor-blue .button:hover, .button--light:hover, .half-half .button:hover, .form[style*="background"] input:hover[type="submit"], .form.column-count-two .wpcf7 input:hover[type="submit"], .link-farm--light .button:hover, .one-column-content--light .button:hover {
     background-color: #FFFFFF;
     color: #003773; }
 
-/*------------------------------------*    ::Mixins
+/*------------------------------------*\
+    ::Mixins
     ----------------------------------*
     ::Strip Unit
     ::Pixels to EMs
@@ -74,23 +85,32 @@ input[type="submit"], .form .wpcf7 input[type="submit"] {
     ::Sticky Footer
     ::Nav
 \*------------------------------------*/
-/*------------------------------------*    ::Strip Unit
+/*------------------------------------*\
+    ::Strip Unit
 \*------------------------------------*/
-/*------------------------------------*    ::Pixels to Ems
+/*------------------------------------*\
+    ::Pixels to Ems
 \*------------------------------------*/
-/*------------------------------------*    ::Placeholder Color
+/*------------------------------------*\
+    ::Placeholder Color
 \*------------------------------------*/
-/*------------------------------------*    ::@Font Face Shortener
+/*------------------------------------*\
+    ::@Font Face Shortener
 \*------------------------------------*/
-/*------------------------------------*    ::Media Queries
+/*------------------------------------*\
+    ::Media Queries
 \*------------------------------------*/
-/*------------------------------------*    ::Changing grid-column to col
+/*------------------------------------*\
+    ::Changing grid-column to col
 \*------------------------------------*/
-/*------------------------------------*    ::Sticky Footer
+/*------------------------------------*\
+    ::Sticky Footer
 \*------------------------------------*/
-/*------------------------------------*    ::Navigation
+/*------------------------------------*\
+    ::Navigation
 \*------------------------------------*/
-/*------------------------------------*    ::Base
+/*------------------------------------*\
+    ::Base
     ------------------------------------*
     ::Normalize.css v3.0.0 | MIT License | git.io/normalize
 \*------------------------------------*/
@@ -212,7 +232,8 @@ body {
   margin-block-end: 1em;
   padding-inline-start: 40px; }
 
-/*------------------------------------*    ::Embedded Content
+/*------------------------------------*\
+    ::Embedded Content
     ------------------------------------*
     ::Normalize.css v3.0.0 | MIT License | git.io/normalize
 \*------------------------------------*/
@@ -222,7 +243,8 @@ img {
 svg:not(:root) {
   overflow: hidden; }
 
-/*------------------------------------*    ::Fonts
+/*------------------------------------*\
+    ::Fonts
 \*------------------------------------*/
 /* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 1, 2016 */
 @font-face {
@@ -281,7 +303,8 @@ svg:not(:root) {
   font-weight: 600;
   font-style: normal; }
 
-/*------------------------------------*    ::Forms
+/*------------------------------------*\
+    ::Forms
     ------------------------------------*
     ::Normalize.css v3.0.0 | MIT License | git.io/normalize
 \*------------------------------------*/
@@ -382,19 +405,19 @@ input[type="datetime-local"], textarea {
   background-color: #F9F9F9;
   border: 1px solid #e0e0e0;
   border-radius: 0; }
-  input[type="text"]:focus,
-  input[type="search"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="tel"]:focus,
-  input[type="number"]:focus,
-  input[type="range"]:focus,
-  input[type="date"]:focus,
-  input[type="month"]:focus,
-  input[type="week"]:focus,
-  input[type="time"]:focus,
-  input[type="datetime"]:focus,
-  input[type="datetime-local"]:focus, textarea:focus {
+  input:focus[type="text"],
+  input:focus[type="search"],
+  input:focus[type="email"],
+  input:focus[type="url"],
+  input:focus[type="tel"],
+  input:focus[type="number"],
+  input:focus[type="range"],
+  input:focus[type="date"],
+  input:focus[type="month"],
+  input:focus[type="week"],
+  input:focus[type="time"],
+  input:focus[type="datetime"],
+  input:focus[type="datetime-local"], textarea:focus {
     outline: none;
     border-color: #b9b9b9; }
 
@@ -416,7 +439,8 @@ input[type="datetime-local"] {
 textarea {
   overflow: auto; }
 
-/*------------------------------------*    ::Grouping Content
+/*------------------------------------*\
+    ::Grouping Content
     ------------------------------------*
     ::Normalize.css v3.0.0 | MIT License | git.io/normalize
 \*------------------------------------*/
@@ -438,7 +462,8 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
-/*------------------------------------*    ::HTML5 Display Definitions
+/*------------------------------------*\
+    ::HTML5 Display Definitions
     ------------------------------------*
     ::Normalize.css v3.0.0 | MIT License | git.io/normalize
 \*------------------------------------*/
@@ -471,7 +496,8 @@ audio:not([controls]) {
 template {
   display: none; }
 
-/*------------------------------------*    ::Links
+/*------------------------------------*\
+    ::Links
     ------------------------------------*
     ::Normalize.css v3.0.0 | MIT License | git.io/normalize
 \*------------------------------------*/
@@ -505,7 +531,8 @@ a {
     color: black;
     background-color: white; }
 
-/*------------------------------------*    ::Tables
+/*------------------------------------*\
+    ::Tables
     ------------------------------------*
     ::Normalize.css v3.0.0 | MIT License | git.io/normalize
 \*------------------------------------*/
@@ -517,7 +544,8 @@ td,
 th {
   padding: 0; }
 
-/*------------------------------------*    ::Text Level Semantics
+/*------------------------------------*\
+    ::Text Level Semantics
     ------------------------------------*
     ::Normalize.css v3.0.0 | MIT License | git.io/normalize
 \*------------------------------------*/
@@ -684,7 +712,8 @@ meta.foundation-mq-xxlarge {
 meta.foundation-data-attribute-namespace {
   font-family: false; }
 
-/*------------------------------------*	::Footer
+/*------------------------------------*\
+	::Footer
 \*------------------------------------*/
 html, body {
   height: 99.99999999%; }
@@ -793,7 +822,8 @@ footer .menu {
   100% {
     transform: scale(0); } }
 
-/*------------------------------------*    ::Header
+/*------------------------------------*\
+    ::Header
 \*------------------------------------*/
 .main-head {
   position: relative; }
@@ -1271,7 +1301,8 @@ input[name=vertical] {
     background-color: #003773;
     color: #FFFFFF; }
 
-/*------------------------------------*    ::Torso With Sidebar
+/*------------------------------------*\
+    ::Torso With Sidebar
 \*------------------------------------*/
 [class*="torso--sidebar"] [class*="torso__content"] {
   padding-left: 0.9375rem;
@@ -1285,7 +1316,8 @@ input[name=vertical] {
   width: 33.33333%;
   float: left; }
 
-/*------------------------------------*    ::Wrappers
+/*------------------------------------*\
+    ::Wrappers
 \*------------------------------------*/
 [class*="__inner"] {
   max-width: 1230px;
@@ -1293,11 +1325,13 @@ input[name=vertical] {
   clear: both;
   padding: 0 20px; }
 
-/*------------------------------------*    ::WP Default Classes
+/*------------------------------------*\
+    ::WP Default Classes
 		::Alignment
 		::Captions
 \*------------------------------------*/
-/*------------------------------------*    ::Alignment
+/*------------------------------------*\
+    ::Alignment
 \*------------------------------------*/
 .alignnone,
 img.alignnone {
@@ -1319,7 +1353,8 @@ img.alignleft {
   float: left;
   margin: 5px 20px 20px 0; }
 
-/*------------------------------------*    ::Captions
+/*------------------------------------*\
+    ::Captions
 \*------------------------------------*/
 .wp-caption {
   clear: both;
@@ -1525,7 +1560,8 @@ img.alignleft {
   .accordion-from-left:nth-child(49) {
     animation-delay: 7350ms; }
 
-/*------------------------------------*    ::Half/Half Module
+/*------------------------------------*\
+    ::Half/Half Module
 \*------------------------------------*/
 .half-half {
   overflow: hidden;
@@ -1601,7 +1637,8 @@ img.alignleft {
   .half-half__frame {
     padding: 3.5vw; }
 
-/*------------------------------------*	::Brokers Pages
+/*------------------------------------*\
+	::Brokers Pages
 \*------------------------------------*/
 .brokers {
   text-align: center; }
@@ -3487,7 +3524,8 @@ img.alignleft {
         height: 50px;
         width: 50px; } }
 
-/*------------------------------------*	::Team Members List
+/*------------------------------------*\
+	::Team Members List
 	(we're cheating and inheriting almost everything from _brokers.scss)
 \*------------------------------------*/
 .brokers-team {
@@ -4146,7 +4184,8 @@ img.alignleft {
   height: 660px !important;
   margin-bottom: 4em !important; }
 
-/*------------------------------------*    ::Popout
+/*------------------------------------*\
+    ::Popout
 \*------------------------------------*/
 .play-button {
   position: absolute;
@@ -4209,7 +4248,8 @@ img.alignleft {
     max-width: 648px;
     top: 0; }
 
-/*------------------------------------*    ::Password Protected Pages
+/*------------------------------------*\
+    ::Password Protected Pages
 \*------------------------------------*/
 .pass-page {
   margin: 0 auto;
@@ -4219,7 +4259,8 @@ img.alignleft {
     width: 100%;
     margin-bottom: 5px; }
 
-/*------------------------------------*    ::Default CF7 Styling
+/*------------------------------------*\
+    ::Default CF7 Styling
 \*------------------------------------*/
 .wpcf7 input,
 .wpcf7 textarea {
@@ -4245,7 +4286,8 @@ img.alignleft {
   .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok {
     background: #6ADE72; }
 
-/*------------------------------------*    ::404 Stylin
+/*------------------------------------*\
+    ::404 Stylin
 \*------------------------------------*/
 .fourofour__content {
   padding-left: 0.9375rem;
@@ -4253,12 +4295,14 @@ img.alignleft {
   width: 100%;
   float: left; }
 
-/*------------------------------------*    ::Global Modifications
+/*------------------------------------*\
+    ::Global Modifications
 |*------------------------------------*|
     ::Block
     ::Text
 \*------------------------------------*/
-/*------------------------------------*    ::Block
+/*------------------------------------*\
+    ::Block
 \*------------------------------------*/
 [class*="--margin-top"] {
   margin-top: 2.8125rem; }
@@ -4324,7 +4368,8 @@ img.alignleft {
       padding-left: 0;
       padding-right: 0; } }
 
-/*------------------------------------*    ::Text
+/*------------------------------------*\
+    ::Text
 \*------------------------------------*/
 [class*="--align-left"] {
   text-align: left; }
@@ -4335,7 +4380,8 @@ img.alignleft {
 [class*="--align-center"] {
   text-align: center; }
 
-/*------------------------------------*    ::Background/Frames
+/*------------------------------------*\
+    ::Background/Frames
 \*------------------------------------*/
 [class*="--bg-white"] {
   background-color: white; }
@@ -4431,5 +4477,6 @@ img.alignleft {
 .slick-arrow.slick-hidden {
   display: none; }
 
-/*------------------------------------*            (╯°□°）╯︵ ┻━┻
+/*------------------------------------*\
+            (╯°□°）╯︵ ┻━┻
 \*------------------------------------*/
